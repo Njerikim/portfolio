@@ -2,267 +2,163 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Beth Njeri Kimani — Backend & AI Engineer, Founder of Axene.io</title>
 <link rel="canonical" href="https://njeri.co.ke/">
 <meta name="description" content="Beth Njeri Kimani is a Nairobi-based backend and AI engineer, Google Cloud certified ML engineer and founder of Axene.io, building M-Pesa-compatible business infrastructure for African SMEs.">
 <meta property="og:title" content="Beth Njeri Kimani — Backend & AI Engineer, Founder of Axene.io">
-<meta property="og:url" content="https://njeri.co.ke/">
 <meta property="og:description" content="FastAPI backends, ML pipelines and cloud infrastructure for African SMEs.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314121f'/%3E%3Ctext x='16' y='22' font-size='16' font-family='sans-serif' font-weight='700' text-anchor='middle' fill='%23ff7a59'%3EBK%3C/text%3E%3C/svg%3E">
-<meta property="og:type" content="website">
+<meta property="og:url" content="https://njeri.co.ke/">
 <meta property="og:image" content="https://njeri.co.ke/images/og-image.jpg">
 <meta property="og:image:alt" content="Beth Njeri Kimani, backend and AI engineer">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://njeri.co.ke/images/og-image.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="color-scheme" content="dark light">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#14121f;--surface:#1d1a2e;--line:#312d4a;--text:#ece9f5;--muted:#a09bb8;--coral:#ff7a59;--mint:#7ee0c3;
---head:'Bricolage Grotesque',Georgia,serif;--body:'Instrument Sans',system-ui,sans-serif}
-*{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font:400 17px/1.7 var(--body);-webkit-font-smoothing:antialiased}
-a{color:inherit}
-:focus-visible{outline:2px solid var(--coral);outline-offset:3px;border-radius:3px}
-.page{display:grid;grid-template-columns:300px 1fr;gap:72px;max-width:1160px;margin:0 auto;padding:0 28px}
-aside{position:sticky;top:0;height:100vh;padding:80px 0 48px;display:flex;flex-direction:column;justify-content:space-between}
-aside h1{font:700 clamp(2.2rem,4vw,2.8rem)/1.02 var(--head);letter-spacing:-.03em;margin-bottom:14px}
-aside .role{font:500 1.15rem/1.35 var(--head);margin-bottom:14px}
-aside .sub{color:var(--muted);font-size:.98rem;max-width:30ch}
-nav ul{list-style:none;padding:0;margin-top:44px}
-nav a{display:inline-flex;align-items:center;gap:12px;padding:6px 0;text-decoration:none;color:var(--muted);font-weight:500;font-size:.95rem}
-nav a::before{content:"";width:22px;height:1px;background:currentColor;transition:width .2s,background .2s}
-nav a:hover,nav a.on{color:var(--text)}
-nav a.on::before{width:56px;background:var(--coral)}
-.social{display:flex;gap:20px;font-size:.95rem}
-.social a{color:var(--muted);text-decoration:none}
-.social a:hover{color:var(--coral)}
-main{padding-bottom:40px}
-section{padding-top:80px}
-section:first-child{padding-top:80px}
-h2{font:700 clamp(1.6rem,3vw,2.1rem)/1.15 var(--head);letter-spacing:-.02em;margin-bottom:28px}
-p{max-width:62ch}
-p+p{margin-top:16px}
-.muted{color:var(--muted)}
-.certs{margin-top:28px;display:flex;flex-wrap:wrap;gap:8px 22px;list-style:none;padding:0;font-size:.92rem}
-.certs a{color:var(--muted);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:4px}
-.certs a:hover{color:var(--coral)}
-
-.job{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:0 0 36px}
-.job time{color:var(--muted);font-size:.9rem;padding-top:4px}
-.job h3{font:700 1.15rem/1.3 var(--head)}
-.job .org{color:var(--coral);font-size:.95rem;margin-bottom:8px}
-.job ul{padding-left:18px;color:var(--muted);font-size:.96rem}
-.job li+li{margin-top:5px}
-
-.proj{display:block;padding:26px 0;border-top:1px solid var(--line)}
-.proj:last-of-type{border-bottom:1px solid var(--line)}
-.proj h3{font:700 1.3rem/1.25 var(--head);margin-bottom:6px}
-.proj h3 a{text-decoration:none}
-.proj h3 a:hover{color:var(--coral)}
-.proj p{color:var(--muted);font-size:.97rem}
-.proj .win{color:var(--mint);font-weight:500;font-size:.93rem;margin-top:8px}
-.proj .stack{color:var(--text);font-size:.88rem;margin-top:10px;opacity:.75}
-
-.shots{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 20px}
-.ph{aspect-ratio:4/3;background:var(--surface);border:1px solid var(--line);border-radius:6px;overflow:hidden}
-.ph img{width:100%;height:100%;object-fit:cover;display:block}
-.ph img.fit{object-fit:contain}
-figcaption{margin-top:10px;font-size:.93rem;line-height:1.45}
-figcaption b{display:block;font-weight:600}
-figcaption span{color:var(--muted)}
-
-dl{display:grid;grid-template-columns:150px 1fr;gap:0}
-dt,dd{padding:12px 0;border-top:1px solid var(--line);font-size:.97rem}
-dt{font-weight:600}
-dd{color:var(--muted)}
-.mail{display:inline-block;font:700 clamp(1.3rem,3.4vw,2rem) var(--head);color:var(--coral);text-decoration:none;margin:6px 0 18px;word-break:break-all}
-.mail:hover{text-decoration:underline}
-footer{padding:48px 0 56px;color:var(--muted);font-size:.85rem}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-
-@media(max-width:900px){
- .page{grid-template-columns:1fr;gap:0}
- aside{position:static;height:auto;padding:48px 0 0}
- nav ul{display:flex;flex-wrap:wrap;gap:0 20px;margin:24px 0}
- nav a::before{display:none}
- section,section:first-child{padding-top:56px}
- .job,dl{grid-template-columns:1fr;gap:0}
- .job time{padding:0 0 4px}
- dt{border-bottom:0;padding-bottom:0} dd{border-top:0;padding-top:2px}
- .shots{grid-template-columns:1fr}
-}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}nav a::before{transition:none}}
+:root{--bg:#0b0a0a;--fg:#ece8e4;--mut:#8f8984;--line:#252120;--acc:#ff8a73;--mint:#7fd9b4;--card:#151312;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f6f3ef;--fg:#151312;--mut:#6a645f;--line:#dcd6cf;--acc:#c9402a;--mint:#13815a;--card:#fff;color-scheme:light}}
+:root[data-theme="light"]{--bg:#f6f3ef;--fg:#151312;--mut:#6a645f;--line:#dcd6cf;--acc:#c9402a;--mint:#13815a;--card:#fff;color-scheme:light}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 1rem/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.mono,.lab,time,.row em,.code,nav a,.stack dt{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.78rem}
+header{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+header nav{display:flex;gap:22px;align-items:center;color:var(--mut)}header nav a:hover{color:var(--fg)}
+.logo{font:1.3rem 'Instrument Serif',Georgia,serif}
+#theme{background:none;border:1px solid var(--line);color:var(--fg);border-radius:99px;padding:4px 12px;font:inherit;font-family:'JetBrains Mono',monospace;font-size:.75rem;cursor:pointer}
+.hero{min-height:78vh;display:flex;flex-direction:column;justify-content:flex-end;padding:60px 0 72px}
+.code{color:var(--mut);margin:0 0 28px}.code b{color:var(--mint);font-weight:400}
+.cur{display:inline-block;width:.55em;height:1em;background:var(--acc);vertical-align:-2px;margin-left:3px;animation:bl 1.1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+h1{font:400 clamp(2.7rem,8.4vw,6.2rem)/1 'Instrument Serif',Georgia,serif;margin:0 0 28px;letter-spacing:-.01em}
+em{font-style:italic;color:var(--acc)}
+.sub{max-width:560px;color:var(--mut);font-size:1.12rem;margin:0 0 30px}
+.cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.btn{border:1px solid var(--fg);border-radius:99px;padding:10px 22px;font-weight:500}.btn:hover{background:var(--fg);color:var(--bg)}
+.open{color:var(--mint);font-family:'JetBrains Mono',monospace;font-size:.8rem}.open:before{content:"●";margin-right:8px}
+section{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:56px 0;border-top:1px solid var(--line)}
+.lab{color:var(--mut);margin:6px 0 0;font-weight:400;text-transform:lowercase}
+.lead{font:1.9rem/1.25 'Instrument Serif',Georgia,serif;margin:0 0 20px;max-width:640px}
+p{margin:0 0 14px}.mut{color:var(--mut)}
+.row{display:grid;grid-template-columns:minmax(120px,190px) 1fr auto;gap:8px 24px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--line);transition:padding .2s}
+.row:first-child{padding-top:0}.row:hover{padding-left:10px}.row:hover b{color:var(--acc)}
+.row b{font:400 1.55rem/1.15 'Instrument Serif',Georgia,serif}.row span i{color:var(--mint);font-style:normal;display:block;font-size:.88rem;margin-top:2px}
+.row em{color:var(--mut);font-style:normal;text-align:right}
+.job{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:0 0 30px}
+.job time{color:var(--mut)}.job h3{font:400 1.45rem 'Instrument Serif',Georgia,serif;margin:0}.org{color:var(--acc);margin-bottom:8px}
+.job ul{margin:0;padding-left:18px;color:var(--mut)}.job li{margin-bottom:5px}
+.talks{list-style:none;margin:0 0 28px;padding:0}.talks li{display:grid;grid-template-columns:130px 1fr;gap:16px;padding:12px 0;border-bottom:1px solid var(--line)}.talks time{color:var(--mut);padding-top:3px}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:0 0 26px}
+.shots img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;background:var(--card);display:block}.shots .fit{object-fit:contain}
+.stack{display:grid;grid-template-columns:110px 1fr;gap:6px 16px;margin:24px 0 0}.stack dt{color:var(--mut)}.stack dd{margin:0}
+.certs{color:var(--mut);font-size:.92rem;margin-top:18px}.certs a{border-bottom:1px solid var(--line)}.certs a:hover{color:var(--acc)}
+.mail{font:clamp(1.8rem,5.5vw,3.6rem)/1.1 'Instrument Serif',Georgia,serif;display:inline-block;border-bottom:1px solid var(--line);margin-bottom:22px}.mail:hover{color:var(--acc)}
+.soc{display:flex;gap:22px;color:var(--mut)}.soc a:hover{color:var(--fg)}
+footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);font-size:.85rem}
+.dots{position:fixed;right:16px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:14px}
+.dots a{width:8px;height:8px;border-radius:50%;background:var(--line);display:block}.dots a[aria-current]{background:var(--acc)}
+@media(max-width:760px){section,.job{grid-template-columns:1fr;gap:8px}.row{grid-template-columns:1fr}.row em{text-align:left}.dots{display:none}header nav a.h{display:none}.shots{grid-template-columns:1fr}.talks li{grid-template-columns:1fr;gap:2px}}
+@media(prefers-reduced-motion:reduce){.cur{animation:none}html{scroll-behavior:auto}.row{transition:none}}
 </style>
 </head>
 <body>
-<div class="page">
-<aside>
-  <div>
-    <h1>Beth Njeri Kimani</h1>
-    <p class="role">Backend and AI engineer, founder of Axene.io</p>
-    <p class="sub" style="color:var(--mint);margin-bottom:10px">Open to work now.</p>
-    <p class="sub">I build ML pipelines, backend APIs and cloud infrastructure that African SMEs can actually afford. Based in Nairobi, Kenya.</p>
-    <nav aria-label="Sections"><ul>
-      <li><a href="#about">About</a></li><li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li><li><a href="#speaking">Talks</a></li>
-      <li><a href="#stack">Stack</a></li><li><a href="#contact">Contact</a></li>
-    </ul></nav>
-  </div>
-  <div class="social">
-    <a href="mailto:njeri@axene.io">Email</a>
-    <a href="https://www.linkedin.com/in/beth-kimani-23605028b/" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="https://github.com/Njerikim" target="_blank" rel="noopener">GitHub</a>
-  </div>
-</aside>
+<nav class="dots" aria-label="Sections">
+<a href="#top" title="Top"></a><a href="#about" title="About"></a><a href="#work" title="Work"></a><a href="#lab" title="Experiments"></a><a href="#experience" title="Experience"></a><a href="#talks" title="Talks"></a><a href="#contact" title="Contact"></a>
+</nav>
+<div class="wrap" id="top">
+<header><a class="logo" href="#top">Beth Njeri Kimani</a>
+<nav><a class="h" href="#work">Work</a><a class="h" href="#experience">Experience</a><a class="h" href="#talks">Talks</a><a href="#contact">Contact</a><button id="theme" type="button" aria-label="Toggle theme">theme</button></nav></header>
 
 <main>
-<section id="about">
-  <h2>Self-taught, shipping in production.</h2>
-  <p>I’m a Google Cloud Certified ML Engineer and backend developer. I learned by building and shipping systems, not through a bootcamp. Today I run <a href="https://axene.io/" target="_blank" rel="noopener">Axene.io</a>, a B2B infrastructure platform giving African SMEs local-first, M-Pesa-compatible alternatives to USD-priced SaaS. Email, meetings and a CRM are live today; chat, payments, domains, analytics and ERP tools are next on the roadmap.</p>
-  <p>I’ve mentored rising data professionals, led AI/ML programming for GDG Chuka and She Code Africa, and spend a lot of weekends in rooms full of laptops helping someone ship their first model. I care about the whole lifecycle, from data engineering to training to containerised deployment on GCP.</p>
-  <ul class="certs">
-    <li><a href="https://www.credly.com/badges/85f87beb-b95a-49a5-ae1a-a19537a4f2a4/" target="_blank" rel="noopener">Google Cloud Professional ML Engineer</a></li>
-    <li><a href="https://www.udacity.com/certificate/e/48f138ee-29be-11f1-b6c7-fb2901eca3b5" target="_blank" rel="noopener">AWS AI Practitioner, Udacity</a></li>
-    <li><a href="https://www.coursera.org/account/accomplishments/specialization/NGDW7J0H6NVI" target="_blank" rel="noopener">Google Advanced Data Analytics</a></li>
-    <li><a href="https://www.coursera.org/account/accomplishments/specialization/C7FKYWVDU7RB" target="_blank" rel="noopener">Google IT Automation with Python</a></li>
-    <li><a href="https://credsverse.com/credentials/afb4e335-f3f0-4d18-b329-d29d526109e5?preview=1" target="_blank" rel="noopener">AI/ML Expert, Everything Data Africa</a></li>
-  </ul>
-</section>
+<div class="hero">
+<p class="code">const njeri = { does: <b>"backend + AI"</b>, from: <b>"Nairobi"</b> };<span class="cur" aria-hidden="true"></span></p>
+<h1>Backend and AI,<br>built <em>for African SMEs.</em></h1>
+<p class="sub">I’m a self-taught engineer and the founder of Axene.io. I build the dependable parts, the APIs, pipelines and infrastructure, that small businesses can actually afford.</p>
+<div class="cta"><a class="btn" href="mailto:njeri@axene.io">Say hello</a><span class="open">Open to work now</span></div>
+</div>
 
-<section id="projects">
-  <h2>Things I’ve built.</h2>
+<section id="about"><h2 class="lab">about</h2><div>
+<p class="lead">Self-taught, <em>shipping in production.</em></p>
+<p class="mut">I’m a Google Cloud Certified ML Engineer and backend developer, and I learned by building. At <a href="https://axene.io/" target="_blank" rel="noopener" style="border-bottom:1px solid var(--line)">Axene.io</a> I’m giving African SMEs local-first, M-Pesa-compatible alternatives to USD-priced SaaS. Email, meetings and a CRM are live today. Chat, payments, domains, analytics and ERP tools are next on the roadmap.</p>
+<p class="mut">I also mentor data professionals and lead AI/ML programming for GDG Chuka and She Code Africa.</p>
+<dl class="stack">
+<dt>languages</dt><dd>Python, SQL, TypeScript</dd>
+<dt>ml and ai</dt><dd>PyTorch, TensorFlow, Scikit-learn, XGBoost, River, LangChain</dd>
+<dt>backend</dt><dd>FastAPI, Django, Node/Express, React</dd>
+<dt>infra</dt><dd>GCP (Vertex AI, Cloud Run), AWS, Docker, CI/CD, SMTP, DNS</dd>
+<dt>data</dt><dd>PostgreSQL, BigQuery, Pandas</dd>
+</dl>
+<p class="certs">
+<a href="https://www.credly.com/badges/85f87beb-b95a-49a5-ae1a-a19537a4f2a4/" target="_blank" rel="noopener">Google Cloud Professional ML Engineer</a> ·
+<a href="https://www.udacity.com/certificate/e/48f138ee-29be-11f1-b6c7-fb2901eca3b5" target="_blank" rel="noopener">AWS AI Practitioner, Udacity</a> ·
+<a href="https://www.coursera.org/account/accomplishments/specialization/NGDW7J0H6NVI" target="_blank" rel="noopener">Google Advanced Data Analytics</a> ·
+<a href="https://www.coursera.org/account/accomplishments/specialization/C7FKYWVDU7RB" target="_blank" rel="noopener">Google IT Automation with Python</a> ·
+<a href="https://credsverse.com/credentials/afb4e335-f3f0-4d18-b329-d29d526109e5?preview=1" target="_blank" rel="noopener">AI/ML Expert, Everything Data Africa</a></p>
+</div></section>
 
-  <article class="proj">
-    <h3><a href="https://axene.io/" target="_blank" rel="noopener">Axene.io: business infrastructure</a></h3>
-    <p>End-to-end engineering of Axene Mail, Axene Meet and an integrated CRM, built as affordable alternatives to USD-priced SaaS for the Kenyan SME market.</p>
-    <p class="win">120 customers on Axene Mail</p>
-    <p class="stack">FastAPI, PostgreSQL, Docker, GCP, SMTP/DNS</p>
-  </article>
+<section id="work"><h2 class="lab">selected work</h2><div>
+<a class="row" href="https://axene.io/" target="_blank" rel="noopener"><b>Axene.io</b><span>Email, meetings and a CRM for African SMEs.<i>120 customers on Axene Mail</i></span><em>FastAPI · PostgreSQL · GCP</em></a>
+<a class="row" href="https://nia-km4t.onrender.com" target="_blank" rel="noopener"><b>Nia</b><span>Gamified CBC revision with an AI tutor, Doma, and student, teacher and parent roles.<i>Winner, Claude Hackathon, Elimu track</i></span><em>React · TypeScript · Node</em></a>
+<a class="row" href="https://store.njeri.co.ke" target="_blank" rel="noopener"><b>Duka Store</b><span>An online shop for everyday Kenyan goods with M-Pesa checkout, currently on the sandbox.</span><em>Django · M-Pesa API</em></a>
+<a class="row" href="https://rag.njeri.co.ke/" target="_blank" rel="noopener"><b>Document Q&amp;A</b><span>Ask questions about your own documents and get answers grounded in the source text.</span><em>RAG · LLM</em></a>
+<a class="row" href="https://cwadvocates.co.ke" target="_blank" rel="noopener"><b>C&amp;W Advocates</b><span>A fast, mobile-friendly site for a Nairobi law firm, an Axene.io client project from 2026.</span><em>Client work</em></a>
+</div></section>
 
-  <article class="proj">
-    <h3><a href="https://nia-km4t.onrender.com" target="_blank" rel="noopener">Nia: gamified CBC revision</a></h3>
-    <p>An AI tutor named Doma guides students through the CBC curriculum, with separate student, teacher and parent roles.</p>
-    <p class="win">Winner, Claude Hackathon, Elimu track</p>
-    <p class="stack">React 19, TypeScript, Node/Express, Neon Postgres</p>
-  </article>
+<section id="lab"><h2 class="lab">experiments</h2><div>
+<p class="mut">Smaller ML projects, run on synthetic or sample data to test an idea.</p>
+<a class="row" href="https://github.com/Njerikim/River-fraud-scoring" target="_blank" rel="noopener"><b>River</b><span>A streaming pipeline that imputes, scales and encodes, then learns a logistic regression one row at a time.</span><em>Python · River</em></a>
+<a class="row" href="https://github.com/Njerikim/knn-vs-mode-imputation" target="_blank" rel="noopener"><b>Impute &amp; Validate</b><span>KNN against a mean/mode baseline on a Kenyan transactions dataset.<i>MAE about 653 vs 775</i></span><em>Scikit-learn</em></a>
+<a class="row" href="https://github.com/Njerikim/neural-networks-and-agents-lab/blob/main/deeplearning.ipynb" target="_blank" rel="noopener"><b>Networks &amp; Agents</b><span>A PyTorch credit-risk net, a feature-importance check and a rule-based water-pump ticket script.</span><em>PyTorch · Oct 2026</em></a>
+</div></section>
 
-  <article class="proj">
-    <h3><a href="https://store.njeri.co.ke" target="_blank" rel="noopener">Duka Store: M-Pesa-ready online shop</a></h3>
-    <p>A Django storefront for everyday Kenyan goods, with category browsing, a cart and checkout built around M-Pesa payments, currently running against the M-Pesa sandbox.</p>
-    <p class="stack">Django, M-Pesa API</p>
-  </article>
+<section id="experience"><h2 class="lab">experience</h2><div>
+<div class="job"><time>2026 to now</time><div><h3>Founder &amp; AI/Python Lead</h3><div class="org">Axene.io</div><ul>
+<li>Architected and shipped Axene Mail on FastAPI, PostgreSQL, Docker and GCP, replacing USD-priced services for Kenyan SMEs, now with 120 customers.</li>
+<li>Built AI features inside Axene Meet (bookings) and the CRM. Chat, payments, domains, analytics and ERP modules are planned, not yet shipped.</li></ul></div></div>
+<div class="job"><time>Dec 2025 to 2026</time><div><h3>Data Science Mentor</h3><div class="org">Data Ladder</div><ul>
+<li>Mentored aspiring data scientists through hands-on cohorts covering Python, statistics and applied ML.</li>
+<li>Guided mentees from raw datasets to deployed models, and introduced standardised visualisation frameworks.</li></ul></div></div>
+<div class="job"><time>Aug to Nov 2025</time><div><h3>Lead Data Analyst</h3><div class="org">Mentor Me Collective</div><ul>
+<li>Led data pipelines in Pandas and BigQuery for cohort analysis, and built Scikit-learn models to predict student placement.</li></ul></div></div>
+<div class="job"><time>Aug 2023 to Mar 2026</time><div><h3>AI/ML Community Lead (volunteer)</h3><div class="org">She Code Africa &amp; Google Developer Groups, Chuka</div><ul>
+<li>Delivered AI/ML workshops and hackathons, ran GCP workshops on Vertex AI and Cloud Functions, and organised Buildathons that produced working cloud-native AI prototypes.</li></ul></div></div>
+</div></section>
 
-  <article class="proj">
-    <h3><a href="https://rag.njeri.co.ke/" target="_blank" rel="noopener">Document Q&amp;A with RAG</a></h3>
-    <p>Ask questions about your own documents and get answers grounded in the source text, using retrieval-augmented generation.</p>
-    <p class="stack">RAG, LLM</p>
-  </article>
+<section id="talks"><h2 class="lab">talks</h2><div>
+<div class="shots">
+<img class="fit" src="images/africa-technology-show.jpg" alt="Panel at the Africa Technology Show 2026 with Beth Njeri Kimani on the right" loading="lazy" onerror="this.remove()">
+<img style="object-position:50% 55%" src="images/rendercon.jpg" alt="Talk at RenderCon Kenya 2026" loading="lazy" onerror="this.remove()">
+<img style="object-position:50% 35%" src="images/thx-kicc.jpg" alt="THX The Hotel Expo at KICC, Nairobi" loading="lazy" onerror="this.remove()">
+</div>
+<ul class="talks">
+<li><time>27 Nov 2026</time><span>Women in Tech Summit Kenya: from prototype to production <em>(upcoming)</em></span></li>
+<li><time>17 Oct 2026</time><span>RenderCon Kenya: building AI features real SMEs will actually use</span></li>
+<li><time>21 Aug 2026</time><span>THX: The Hotel Expo, KICC, Nairobi</span></li>
+<li><time>23 Jul 2026</time><span>Africa Technology Show: panel on digital public infrastructure and youth-led startups</span></li>
+<li><time>Earlier</time><span>GDG Chuka, She Code Africa Chuka and PinkHub sessions. AWS Student Builder Group at Zetech: Intro to SQL with Amazon Athena. Winner, GoMyCode Kenya Hackathon (KES 300,000 scholarship).</span></li>
+</ul>
+</div></section>
 
-  <article class="proj">
-    <h3><a href="https://cwadvocates.co.ke" target="_blank" rel="noopener">Website for C&amp;W Advocates</a></h3>
-    <p class="stack" style="margin:0 0 6px">2026, an Axene.io client project</p>
-    <p>A fast, mobile-friendly site for a Nairobi law firm, launched on the firm’s own domain and organised around what a client needs to decide: practice areas, partner profiles and how the firm works.</p>
-  </article>
-
-  <h2 style="margin:64px 0 8px;font-size:1.35rem">Experiments and notebooks</h2>
-  <p class="muted" style="margin-bottom:20px">Smaller ML projects, run on synthetic or sample data to test an idea.</p>
-
-  <article class="proj">
-    <h3><a href="https://github.com/Njerikim/River-fraud-scoring" target="_blank" rel="noopener">River: streaming ML pipeline</a></h3>
-    <p>A pipeline that imputes missing values, scales and one-hot encodes features, then learns a logistic regression one row at a time, scored by predicting before it learns. Run on a deliberately messy synthetic Kenyan customer dataset.</p>
-    <p class="stack">Python, River, online ML, logistic regression</p>
-  </article>
-
-  <article class="proj">
-    <h3><a href="https://github.com/Njerikim/knn-vs-mode-imputation" target="_blank" rel="noopener">Impute &amp; Validate: KNN vs mode</a></h3>
-    <p>Fills missing values in a Kenyan customer-transactions dataset, then tests the result by hiding known values and scoring the guesses against a mean/mode baseline.</p>
-    <p class="win">KNN beat the baseline: MAE about 653 vs 775</p>
-    <p class="stack">Python, Scikit-learn, KNNImputer</p>
-  </article>
-
-  <article class="proj">
-    <h3><a href="https://github.com/Njerikim/neural-networks-and-agents-lab/blob/main/deeplearning.ipynb" target="_blank" rel="noopener">Neural Networks &amp; Agents Lab</a></h3>
-    <p class="stack" style="margin:0 0 6px">October 2026</p>
-    <p>Three runnable demos on synthetic data: a PyTorch credit-risk network, a random-forest check on which features drive a lending decision, and a rule-based script that logs maintenance tickets for failing rural water pumps.</p>
-    <p class="stack">Python, PyTorch, scikit-learn</p>
-  </article>
-</section>
-
-<section id="experience">
-  <h2>Where the work has lived.</h2>
-  <div class="job"><time>2026 to now</time><div>
-    <h3>Founder &amp; AI/Python Lead</h3><div class="org"><a href="https://axene.io/" target="_blank" rel="noopener" style="text-decoration:none">Axene.io</a></div>
-    <ul>
-      <li>Architected and shipped Axene Mail, a transactional email platform on FastAPI, PostgreSQL, Docker and GCP that replaces USD-priced services for Kenyan SMEs, now with 120 customers.</li>
-      <li>Built AI features inside Axene Meet (bookings) and the CRM. Chat, payments, domains, analytics and ERP modules are planned, not yet shipped.</li>
-      <li>Led the full SDLC on consulting projects, from system design to containerised deployment.</li>
-    </ul></div></div>
-  <div class="job"><time>Dec 2025 to 2026</time><div>
-    <h3>Data Science Mentor</h3><div class="org">Data Ladder</div>
-    <ul>
-      <li>Mentored aspiring data scientists through hands-on cohorts covering Python, statistics and applied ML.</li>
-      <li>Guided mentees from raw datasets to deployed models, reviewing notebooks, feature engineering and evaluation choices.</li>
-      <li>Introduced standardised visualisation frameworks so cohorts could read and present their results consistently.</li>
-    </ul></div></div>
-  <div class="job"><time>Aug to Nov 2025</time><div>
-    <h3>Lead Data Analyst</h3><div class="org">Mentor Me Collective</div>
-    <ul>
-      <li>Led collaborative data pipelines in Pandas and BigQuery for cohort analysis at scale.</li>
-      <li>Built Scikit-learn models to predict student placement.</li>
-    </ul></div></div>
-  <div class="job"><time>Aug 2023 to Mar 2026</time><div>
-    <h3>AI/ML Community Lead (volunteer)</h3><div class="org">She Code Africa &amp; Google Developer Groups, Chuka</div>
-    <ul>
-      <li>Designed and delivered AI/ML workshops and hackathons using TensorFlow, PyTorch and Scikit-learn.</li>
-      <li>Ran GCP workshops on Vertex AI, Cloud Functions and serverless AI architecture.</li>
-      <li>Organised community Buildathons that produced working cloud-native AI prototypes.</li>
-    </ul></div></div>
-</section>
-
-<section id="speaking">
-  <h2 style="margin-bottom:32px">Talks and community.</h2>
-  <div class="shots">
-    <figure><div class="ph"><img class="fit" src="images/africa-technology-show.jpg" alt="Panel at the Africa Technology Show 2026: four speakers seated on stage in front of a screen showing the panel title, with Beth Njeri Kimani on the right" loading="lazy" onerror="this.parentNode.remove()"></div><figcaption><b>Africa Technology Show 2026</b><span>23 July 2026. Panel on digital public infrastructure and youth-led startups</span></figcaption></figure>
-    <figure><div class="ph"><img style="object-position:50% 55%" src="images/rendercon.jpg" alt="RenderCon Kenya 2026 talk" loading="lazy" onerror="this.parentNode.remove()"></div><figcaption><b>RenderCon Kenya 2026</b><span>17 October 2026. Building AI features real SMEs will actually use</span></figcaption></figure>
-    <figure><div class="ph"><img style="object-position:50% 35%" src="images/thx-kicc.jpg" alt="THX The Hotel Expo at KICC Nairobi" loading="lazy" onerror="this.parentNode.remove()"></div><figcaption><b>THX: The Hotel Expo 2026</b><span>21 August 2026, KICC, Nairobi</span></figcaption></figure>
-    <figure><div class="ph"><img class="fit" src="images/women-in-tech.jpg" alt="Women in Tech Summit Kenya talk" loading="lazy" onerror="this.parentNode.remove()"></div><figcaption><b>Women in Tech Summit Kenya</b><span>Upcoming, 27 November 2026. From prototype to production</span></figcaption></figure>
-    <figure><div class="ph"><img style="object-position:50% 30%" src="images/gdg-chuka.jpg" alt="Talk at GDG Chuka" loading="lazy" onerror="this.parentNode.remove()"></div><figcaption><b>GDG Chuka</b><span>The Intelligence Revolution: how smart systems are redefining modern software</span></figcaption></figure>
-    <figure><div class="ph"><img style="object-position:60% 45%" src="images/sca-chuka-genai.jpg" alt="Generative AI talk at She Code Africa Chuka" loading="lazy" onerror="this.parentNode.remove()"></div><figcaption><b>She Code Africa Chuka</b><span>Generative AI talk</span></figcaption></figure>
-  </div>
-  <dl style="margin-top:44px">
-    <dt>Also</dt><dd>She Code Africa × PinkHub AI/ML sessions. AWS Student Builder Group at Zetech University: Intro to SQL with Amazon Athena.</dd>
-    <dt>Mentoring</dt><dd>Data Ladder, Cohort 6 graduation.</dd>
-    <dt>Awards</dt><dd>GoMyCode Kenya Hackathon, KES 300,000 scholarship.</dd>
-  </dl>
-</section>
-
-<section id="stack">
-  <h2>What I build with.</h2>
-  <dl>
-    <dt>Languages</dt><dd>Python, SQL, TypeScript</dd>
-    <dt>ML and AI</dt><dd>PyTorch, TensorFlow, Scikit-learn, XGBoost, River, LangChain</dd>
-    <dt>Backend</dt><dd>FastAPI, Django, Node/Express, React</dd>
-    <dt>Infrastructure</dt><dd>GCP (Vertex AI, Cloud Run), AWS, Docker, CI/CD, SMTP, DNS</dd>
-    <dt>Data</dt><dd>PostgreSQL, BigQuery, Pandas</dd>
-    <dt>Tooling</dt><dd>Git/GitHub, PyTest</dd>
-  </dl>
-</section>
-
-<section id="contact">
-  <h2>Building for African SMEs, or hiring for an engineering role?</h2>
-  <p>I’m open to work right now: backend, AI and ML roles are what I’m after, and I’ll keep building Axene alongside. If you’re hiring, or have a problem an African SME would pay to have solved, write to me.</p>
-  <a class="mail" href="mailto:njeri@axene.io">njeri@axene.io</a>
-</section>
-<footer>© 2026 Beth Njeri Kimani, Nairobi, Kenya</footer>
+<section id="contact"><h2 class="lab">contact</h2><div>
+<p class="lead">Hiring, or got a problem <em>an SME would pay to solve?</em></p>
+<p class="mut">I’m open to work right now: backend, AI and ML roles are what I’m after, and I’ll keep building Axene alongside.</p>
+<a class="mail" href="mailto:njeri@axene.io">njeri@axene.io</a>
+<div class="soc"><a href="https://github.com/Njerikim" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/beth-kimani-23605028b/" target="_blank" rel="noopener">LinkedIn</a><a href="https://axene.io/" target="_blank" rel="noopener">Axene.io</a></div>
+</div></section>
 </main>
+<footer>© 2026 Beth Njeri Kimani · Nairobi, Kenya</footer>
 </div>
 <script>
-const links=[...document.querySelectorAll('nav a')];
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-40% 0px -55% 0px'});
-document.querySelectorAll('main section').forEach(s=>io.observe(s));
+(function(){var r=document.documentElement,b=document.getElementById('theme');
+try{var t=localStorage.getItem('theme');if(t)r.setAttribute('data-theme',t)}catch(e){}
+b.addEventListener('click',function(){var d=r.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');var n=d==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}});
+var ids=['top','about','work','lab','experience','talks','contact'],links={};
+document.querySelectorAll('.dots a').forEach(function(a){links[a.getAttribute('href').slice(1)]=a});
+if('IntersectionObserver' in window){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){Object.values(links).forEach(function(l){l.removeAttribute('aria-current')});links[e.target.id].setAttribute('aria-current','true')}})},{rootMargin:'-40% 0px -55% 0px'});
+ids.forEach(function(i){var el=document.getElementById(i);if(el)o.observe(el)})}})();
 </script>
 </body>
 </html>
